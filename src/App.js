@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import CardList from './CardList'
 
 class App extends Component {
     constructor(){
@@ -15,7 +16,7 @@ class App extends Component {
     }
 
     render(){
-        return(<h1>Hello world</h1>)
+        return <CardList champions={this.state.leagueData}/>
     }
 }
 
