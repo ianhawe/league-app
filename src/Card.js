@@ -22,6 +22,8 @@ const Card = (
   armscl,
   splblk,
   splblkscl,
+
+      /* Other Stats*/
   rsc,
   rscrgn,
   rscscl,
