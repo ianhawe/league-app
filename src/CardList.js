@@ -3,10 +3,14 @@ import React from "react";
 const CardList = (props) => {
   let champions = props.champions ? Object.entries(props.champions.data) : [];
 
-  let removeStat = (stat) => {
-    console.log(1, stat);
-    if (stat === 0) {
-      return "N/A";
+  let removeStat = (statType, stat) => {
+    if (stat > 0) {
+      return (
+        <li>
+          {" "}
+          {statType} + {stat}{" "}
+        </li>
+      );
     }
   };
 
@@ -20,43 +24,52 @@ const CardList = (props) => {
               src={`http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/${champion[1].image.full}`}
               alt="bob"
             />
+
+            <h2>Offensive Stats</h2>
             <ul>
-              Stats
               {/* Offensive Stats*/}
-              <li>Attack Range: {champion[1].stats.attackrange}</li>
-              <li>
-                Attack Damage Scale: {champion[1].stats.attackdamageperlevel}
-              </li>
-              <li>
-                Attack Speed Scale: {champion[1].stats.attackspeedperlevel}
-              </li>
-              <li>Attack Speed: {champion[1].stats.attackspeed}</li>
-              <li>Critical Chance: {removeStat(champion[1].stats.crit)}</li>
-              <li>
-                Critical Chance per level:{" "}
-                {removeStat(champion[1].stats.critperlevel)}
-              </li>
-            </ul>
-            {/* Defensive Stats*/}
-            <ul>
-              <li>Hp: {champion[1].stats.hp}</li>
-              <li>Hp Scale: {champion[1].stats.hpperlevel}</li>
-              <li>HP Regen: {champion[1].stats.hpregen}</li>
-              <li>HP Regen Scale: {champion[1].stats.hpregenperlevel}</li>
-              <li>Armour: {champion[1].stats.movespeed}</li>
-              <li>Armour Scale: {champion[1].stats.armor}</li>
-              <li>Spell Block: {champion[1].stats.spellblock}</li>
-              <li>Spell Block Scale: {champion[1].stats.spellblockperlevel}</li>
+              {removeStat("Attack Range: ", champion[1].stats.attackrange)}
+              {removeStat("Attack Damage: ", champion[1].stats.attackdamage)}
+              {removeStat("Attack Speed: ", champion[1].stats.attackspeed)}
+              {removeStat(
+                "Attack Damage Scale: ",
+                champion[1].stats.attackdamageperlevel
+              )}
+              {removeStat(
+                "Attack Speed Scale: ",
+                champion[1].stats.attackspeedperlevel
+              )}
+              {removeStat("Critical Chance: ", champion[1].stats.crit)}
+              {removeStat(
+                "Critical Chance per level: ",
+                champion[1].stats.critperlevel
+              )}
             </ul>
 
+            {/* Defensive Stats*/}
+            <h2>Defensive </h2>
+            <ul>
+              {removeStat("Hp Scale: ", champion[1].stats.hpperlevel)}
+              {removeStat("Hp: ", champion[1].stats.hp)}
+              {removeStat("HP Regen: ", champion[1].stats.hpregen)}
+              {removeStat(
+                "HP Regen Scale: ",
+                champion[1].stats.hpregenperlevel
+              )}
+              {removeStat("Armour: ", champion[1].stats.movespeed)}
+              {removeStat("Armour Scale: ", champion[1].stats.armor)}
+              {removeStat("Spell Block: ", champion[1].stats.spellblock)}
+              {removeStat(
+                "Spell Block Scale: ",
+                champion[1].stats.spellblockperlevel
+              )}
+            </ul>
             {/* Other Stats*/}
             <ul>
-              <li>Mana: {removeStat(champion[1].stats.mp)}</li>
-              <li>MP Regen: {removeStat(champion[1].stats.mpregen)}</li>
-              <li>
-                MP Regen Scale: {removeStat(champion[1].stats.mpregenperlevel)}
-              </li>
-              <li>Mana Scale: {removeStat(champion[1].stats.mpperlevel)}</li>
+             { removeStat( "Resource: ", champion[1].stats.mp  )}
+             { removeStat( "Resource Regen: ", champion[1].stats.mpregen )}
+             { removeStat( "Resource Scale: ", champion[1].stats.mpperlevel )}
+             { removeStat( "Resource Regen Scale: ", champion[1].stats.mpregenperlevel )}
             </ul>
           </div>
         ))}
