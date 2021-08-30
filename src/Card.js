@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
+import "./Card.css";
 
 const Card = ({
   name,
@@ -31,36 +32,38 @@ const Card = ({
 }) => {
   return (
     <div>
-      <h2>{name}</h2>
-
-      <img src={pic} alt="{name}" />
-      <ul>
-        {atkrng}
-        {atkdmg}
-        {atkspd}
-        {atkdmgscl}
-        {atkspdscl}
-        {cricha}
-        {crichascl}
-      </ul>
-
-      <ul>
-        {hp}
-        {hpscl}
-        {hprgn}
-        {hprgnscl}
-        {arm}
-        {armscl}
-        {splblk}
-        {splblkscl}
-      </ul>
-
-      <ul>
-        {rsc}
-        {rscrgn}
-        {rscscl}
-        {rscrgnscl}
-      </ul>
+    
+        <h2>{name}</h2>
+  
+        <img src={pic} alt="{name}" /> 
+        <div className='container'>
+        <ul className='container-child-1'>
+          {atkrng}
+          {atkdmg}
+          {atkspd}
+          {atkdmgscl}
+          {atkspdscl}
+          {cricha}
+          {crichascl}
+        </ul>
+          <ul className='container-child-2'>
+            {hp}
+            {hpscl}
+            {hprgn}
+            {hprgnscl}
+            {arm}
+            {armscl}
+            {splblk}
+            {splblkscl}
+          </ul>
+     </div>
+          <ul className='container-child-3'>
+            {rsc}
+            {rscrgn}
+            {rscscl}
+            {rscrgnscl}
+          </ul>  
+  
     </div>
   );
 };
