@@ -31,22 +31,13 @@ const Card = ({
   rscrgnscl,
 }) => {
   return (
-    <div>
+    <div className='card'>
     
         <h2>{name}</h2>
   
         <img src={pic} alt="{name}" /> 
         <div className='container'>
-        <ul className='container-child-1'>
-          {atkrng}
-          {atkdmg}
-          {atkspd}
-          {atkdmgscl}
-          {atkspdscl}
-          {cricha}
-          {crichascl}
-        </ul>
-          <ul className='container-child-2'>
+        <ul className='container-child-2'>
             {hp}
             {hpscl}
             {hprgn}
@@ -56,6 +47,15 @@ const Card = ({
             {splblk}
             {splblkscl}
           </ul>
+        <ul className='container-child-1'>
+          {atkrng}
+          {atkdmg}
+          {atkspd}
+          {atkdmgscl}
+          {atkspdscl}
+          {cricha}
+          {crichascl}
+        </ul>
      </div>
           <ul className='container-child-3'>
             {rsc}
