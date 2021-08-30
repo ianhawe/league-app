@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import CardList from './CardList'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor(){
+        super();
+        this.state = {
+            leagueData: ''
+        }
+    }
+
+    componentDidMount(){
+        fetch("http://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US/champion.json")
+        .then((response) => response.json())
+        .then((champions) => this.setState({leagueData:champions}))
+    }
+
+    render(){
+        return <CardList champions={this.state.leagueData}/>
+    }
 }
 
 export default App;
