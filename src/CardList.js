@@ -8,7 +8,6 @@ const CardList = (props) => {
     if (stat > 0) {
       return (
         <li>
-          {" "}
           {statType} + {stat}{" "}
         </li>
       );

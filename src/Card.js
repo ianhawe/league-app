@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-const Card = (
- { name,
+const Card = ({
+  name,
   pic,
   /* Offensive Stats*/
   atkrng,
@@ -13,7 +13,7 @@ const Card = (
   cricha,
   crichascl,
 
-         /*  Defensive Stats*/
+  /*  Defensive Stats*/
   hp,
   hpscl,
   hprgn,
@@ -23,43 +23,45 @@ const Card = (
   splblk,
   splblkscl,
 
-      /* Other Stats*/
+  /* Other Stats*/
   rsc,
   rscrgn,
   rscscl,
-  rscrgnscl}
-) => {
-  return(
-  
-  <div>
+  rscrgnscl,
+}) => {
+  return (
+    <div>
       <h2>{name}</h2>
-    
-  <img src= {pic} alt="{name}" />        
-  <ul>
-  {atkrng}
-  {atkdmg}
-  {atkspd}
-  {atkdmgscl}
-  {atkspdscl}
-  {cricha}
-  {crichascl}
-  {hp}
-  {hpscl}
-  {hprgn}
-  {hprgnscl}
-  {arm}
-  {armscl}
-  {splblk}
-  {splblkscl}
-  {rsc}
-  {rscrgn}
-  {rscscl}
-  {rscrgnscl}
-              
-          
-      </ul>
-  
 
-  </div>);
+      <img src={pic} alt="{name}" />
+      <ul>
+        {atkrng}
+        {atkdmg}
+        {atkspd}
+        {atkdmgscl}
+        {atkspdscl}
+        {cricha}
+        {crichascl}
+      </ul>
+
+      <ul>
+        {hp}
+        {hpscl}
+        {hprgn}
+        {hprgnscl}
+        {arm}
+        {armscl}
+        {splblk}
+        {splblkscl}
+      </ul>
+
+      <ul>
+        {rsc}
+        {rscrgn}
+        {rscscl}
+        {rscrgnscl}
+      </ul>
+    </div>
+  );
 };
 export default Card;
