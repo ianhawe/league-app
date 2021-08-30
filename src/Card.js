@@ -1,8 +1,9 @@
 import { render } from "@testing-library/react";
 import React from "react";
+import "./Card.css";
 
-const Card = (
- { name,
+const Card = ({
+  name,
   pic,
   /* Offensive Stats*/
   atkrng,
@@ -13,7 +14,7 @@ const Card = (
   cricha,
   crichascl,
 
-         /*  Defensive Stats*/
+  /*  Defensive Stats*/
   hp,
   hpscl,
   hprgn,
@@ -23,43 +24,47 @@ const Card = (
   splblk,
   splblkscl,
 
-      /* Other Stats*/
+  /* Other Stats*/
   rsc,
   rscrgn,
   rscscl,
-  rscrgnscl}
-) => {
-  return(
-  
-  <div>
-      <h2>{name}</h2>
+  rscrgnscl,
+}) => {
+  return (
+    <div className='card'>
     
-  <img src= {pic} alt="{name}" />        
-  <ul>
-  {atkrng}
-  {atkdmg}
-  {atkspd}
-  {atkdmgscl}
-  {atkspdscl}
-  {cricha}
-  {crichascl}
-  {hp}
-  {hpscl}
-  {hprgn}
-  {hprgnscl}
-  {arm}
-  {armscl}
-  {splblk}
-  {splblkscl}
-  {rsc}
-  {rscrgn}
-  {rscscl}
-  {rscrgnscl}
-              
-          
-      </ul>
+        <h2>{name}</h2>
   
-
-  </div>);
+        <img src={pic} alt="{name}" /> 
+        <div className='container'>
+        <ul className='container-child-2'>
+            {hp}
+            {hpscl}
+            {hprgn}
+            {hprgnscl}
+            {arm}
+            {armscl}
+            {splblk}
+            {splblkscl}
+          </ul>
+        <ul className='container-child-1'>
+          {atkrng}
+          {atkdmg}
+          {atkspd}
+          {atkdmgscl}
+          {atkspdscl}
+          {cricha}
+          {crichascl}
+        </ul>
+     </div>
+          <ul className='container-child-3'>
+            {rsc}
+            {rscrgn}
+            {rscscl}
+            {rscrgnscl}
+          </ul>  
+  
+    </div>
+  );
 };
 export default Card;

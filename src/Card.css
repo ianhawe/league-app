@@ -1,0 +1,10 @@
+.card{
+    text-align: center;
+}
+.container{
+    display:flex;
+    justify-content: center;
+}
+ul li {
+    list-style: none;
+}
