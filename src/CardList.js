@@ -15,7 +15,7 @@ const CardList = (props) => {
   };
 
   return (
-    <div>
+    <div className="card-list">
       {champions.length > 0 &&
         champions.map((champion) => (
           <Card
