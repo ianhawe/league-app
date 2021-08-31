@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 const CardList = (props) => {
-  let champions = props.champions ? Object.entries(props.champions.data) : [];
+  let champions = props.champions ? Object.entries(props.champions) : [];
 
   let removeStat = (statType, stat) => {
      if (stat > 0) {

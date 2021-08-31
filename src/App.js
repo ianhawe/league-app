@@ -24,12 +24,23 @@ class App extends Component {
   };
 
   render() {
+    const filterChampions = []
+    console.log(this.state.leagueData.data)
+    if(this.state.leagueData.data){
+      for (let champion in this.state.leagueData.data){
+        if(champion.toLowerCase().includes(this.state.searchfield.toLowerCase())){
+          filterChampions.push(this.state.leagueData.data[champion])
+        }
+       
+      }  
+      console.log(filterChampions)
+    }
+  
     return (
-      <div>
- 
+        <div>
         <h1> League of Legend's Champions</h1>
         <SearchBox searchChange={this.onSearchChange} />
-        <CardList champions={this.state.leagueData} />
+        <CardList champions={filterChampions.length > 0 ? filterChampions: this.state.leagueData.data} />
       </div>
     );
   }
