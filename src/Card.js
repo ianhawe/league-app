@@ -35,17 +35,8 @@ const Card = ({
       <h2>{name}</h2>
 
       <img src={pic} alt="{name}" />
-      <div className="flex-container">
-        <ul>
-          {hp}
-          {hpscl}
-          {hprgn}
-          {hprgnscl}
-          {arm}
-          {armscl}
-          {splblk}
-          {splblkscl}
-        </ul>
+      <div className="stat-container">
+      
         <ul>
           {atkrng}
           {atkdmg}
@@ -57,12 +48,23 @@ const Card = ({
         </ul>
 
         <ul>
+          {hp}
+          {hpscl}
+          {hprgn}
+          {hprgnscl}
+          {arm}
+          {armscl}
+          {splblk}
+          {splblkscl}
+        </ul>
+    </div>
+        <ul className='group-3'>
           {rsc}
           {rscrgn}
           {rscscl}
           {rscrgnscl}
         </ul>
-      </div>
+  
     </div>
   );
 };
