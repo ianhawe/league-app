@@ -1,10 +1,42 @@
 .card{
+    border: 1px solid black;
+    width:600px;
     text-align: center;
+    margin: 30px;
+    box-shadow: 10px 10px #223162;
+    transition: all 0.3s ease-in-out;
+    background-color: #224562;
+    color: aliceblue;
 }
-.container{
+.card:hover{
+    transform: scale(1.09);
+}
+.card-list{
     display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
     justify-content: center;
+  
 }
+
 ul li {
     list-style: none;
+    text-align: left;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.stat-container{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.group-3{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 40px;
 }

@@ -31,39 +31,40 @@ const Card = ({
   rscrgnscl,
 }) => {
   return (
-    <div className='card'>
-    
-        <h2>{name}</h2>
-  
-        <img src={pic} alt="{name}" /> 
-        <div className='container'>
-        <ul className='container-child-2'>
-            {hp}
-            {hpscl}
-            {hprgn}
-            {hprgnscl}
-            {arm}
-            {armscl}
-            {splblk}
-            {splblkscl}
-          </ul>
-        <ul className='container-child-1'>
+    <div className="card">
+      <h2>{name}</h2>
+
+      <img src={pic} alt="{name}" />
+      <div className="stat-container">
+        <ul>
           {atkrng}
           {atkdmg}
           {atkspd}
+          <p> </p>
           {atkdmgscl}
           {atkspdscl}
           {cricha}
           {crichascl}
         </ul>
-     </div>
-          <ul className='container-child-3'>
-            {rsc}
-            {rscrgn}
-            {rscscl}
-            {rscrgnscl}
-          </ul>  
-  
+
+        <ul>
+          {hp}
+          {hprgn}
+          {arm}
+          {splblk}
+          <p> </p>
+          {hpscl}
+          {hprgnscl}
+          {armscl}
+          {splblkscl}
+        </ul>
+      </div>
+      <ul className="group-3">
+        {rsc}
+        {rscrgn}
+        {rscscl}
+        {rscrgnscl}
+      </ul>
     </div>
   );
 };
