@@ -5,7 +5,7 @@ const CardList = (props) => {
   let champions = props.champions ? Object.entries(props.champions) : [];
 
   let removeStat = (statType, stat) => {
-     if (stat > 0) {
+    if (stat > 0) {
       return (
         <li>
           {statType}: {stat}{" "}
@@ -23,14 +23,8 @@ const CardList = (props) => {
             pic={`http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/${champion[1].image.full}`}
             /* Offensive Stats*/
             atkrng={removeStat("Attack Range", champion[1].stats.attackrange)}
-            atkdmg={removeStat(
-              "Attack Damage",
-              champion[1].stats.attackdamage
-            )}
-            atkspd={removeStat(
-              "Attack Speed",
-              champion[1].stats.attackspeed
-            )}
+            atkdmg={removeStat("Attack Damage", champion[1].stats.attackdamage)}
+            atkspd={removeStat("Attack Speed", champion[1].stats.attackspeed)}
             atkdmgscl={removeStat(
               "Attack Damage Scale",
               champion[1].stats.attackdamageperlevel
@@ -64,16 +58,12 @@ const CardList = (props) => {
 
             rsc={removeStat("Resource", champion[1].stats.mp)}
             rscrgn={removeStat("Resource Regen", champion[1].stats.mpregen)}
-            rscscl={removeStat(
-              "Resource Scale",
-              champion[1].stats.mpperlevel
-            )}
+            rscscl={removeStat("Resource Scale", champion[1].stats.mpperlevel)}
             rscrgnscl={removeStat(
               "Resource Regen Scale",
               champion[1].stats.mpregenperlevel
             )}
           />
-          
         ))}
     </div>
   );
