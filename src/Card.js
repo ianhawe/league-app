@@ -36,11 +36,11 @@ const Card = ({
 
       <img src={pic} alt="{name}" />
       <div className="stat-container">
-      
         <ul>
           {atkrng}
           {atkdmg}
           {atkspd}
+          <p> </p>
           {atkdmgscl}
           {atkspdscl}
           {cricha}
@@ -49,22 +49,22 @@ const Card = ({
 
         <ul>
           {hp}
-          {hpscl}
           {hprgn}
-          {hprgnscl}
           {arm}
-          {armscl}
           {splblk}
+          <p> </p>
+          {hpscl}
+          {hprgnscl}
+          {armscl}
           {splblkscl}
         </ul>
-    </div>
-        <ul className='group-3'>
-          {rsc}
-          {rscrgn}
-          {rscscl}
-          {rscrgnscl}
-        </ul>
-  
+      </div>
+      <ul className="group-3">
+        {rsc}
+        {rscrgn}
+        {rscscl}
+        {rscrgnscl}
+      </ul>
     </div>
   );
 };
