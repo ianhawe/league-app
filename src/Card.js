@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import "./Card.css";
+import StatCalculator from "./StatCalculator";
 
 const Card = ({
   name,
@@ -58,6 +59,7 @@ const Card = ({
           {armscl}
           {splblkscl}
         </ul>
+        
       </div>
       <ul className="group-3">
         {rsc}
