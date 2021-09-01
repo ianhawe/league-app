@@ -4,7 +4,6 @@ const SearchBox = ({searchChange}) => {
 
     return(
       <div>
-            <h1> Hello world from search SearchBox</h1>
             <input 
              type='search' 
              placeholder='Search for your champion here...'  

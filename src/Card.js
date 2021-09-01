@@ -1,7 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import "./Card.css";
-import StatCalculator from "./StatCalculator";
 
 const Card = ({
   name,
@@ -30,6 +29,9 @@ const Card = ({
   rscrgn,
   rscscl,
   rscrgnscl,
+
+  /* Calculators */
+  atkdmgCalc
 }) => {
   return (
     <div className="card">
@@ -59,7 +61,10 @@ const Card = ({
           {armscl}
           {splblkscl}
         </ul>
-        
+
+        <ul>
+        {atkdmgCalc}
+        </ul>
       </div>
       <ul className="group-3">
         {rsc}

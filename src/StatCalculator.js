@@ -1,9 +1,11 @@
 import React from "react";
+import Card from "./Card";
 
 const StatCalculator = () => {
-    return(
-        <div>hello world</div>
-    )
-
-}
+  return (
+    <div>
+      <Card atkdmgCalc={'hello world'} />
+    </div>
+  );
+};
 export default StatCalculator;
