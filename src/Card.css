@@ -1,8 +1,8 @@
 .card{
     border: 1px solid black;
-    width:600px;
+    width:400px;
     text-align: center;
-    margin: 30px;
+    margin: 20px;
     box-shadow: 10px 10px #223162;
     transition: all 0.3s ease-in-out;
     background-color: #224562;
@@ -24,6 +24,7 @@ ul li {
     list-style: none;
     text-align: left;
 }
+
 img{
     display: block;
     margin-left: auto;
@@ -39,4 +40,9 @@ img{
     display: flex;
     justify-content: space-evenly;
     padding: 10px 40px;
+    
+}
+.group-3 li {
+    text-align: center;
+    padding: 0px 10px;
 }

@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import "./Card.css";
+import StatCalculator from "./StatCalculator";
 
 const Card = ({
   name,
@@ -64,6 +65,12 @@ const Card = ({
         {rscrgn}
         {rscscl}
         {rscrgnscl}
+      </ul>
+      <ul>
+        <li>
+          <StatCalculator />
+        </li>
+        <li>asjoasdpi</li>
       </ul>
     </div>
   );
