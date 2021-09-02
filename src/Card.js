@@ -67,7 +67,32 @@ const Card = ({
         {rscrgnscl}
       </ul>
       <ul>
-        <StatCalculator />
+        <StatCalculator
+          name={name}
+          pic={pic}
+          /* Offensive Stats*/
+          atkrng={atkrng}
+          atkdmg={atkdmg}
+          atkspd={atkspd}
+          atkdmgscl={atkdmgscl}
+          atkspdscl={atkspdscl}
+          cricha={cricha}
+          crichascl={crichascl}
+          /*  Defensive Stats*/
+          hp={hp}
+          hpscl={hpscl}
+          hprgn={hprgn}
+          hprgnscl={hprgnscl}
+          arm={arm}
+          armscl={armscl}
+          splblk={splblk}
+          splblkscl={splblkscl}
+          /* Other Stats*/
+          rsc={rsc}
+          rscrgn={rscrgn}
+          rscscl={rscscl}
+          rscrgnscl={rscrgnscl}
+        />
       </ul>
     </div>
   );
