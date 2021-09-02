@@ -34,7 +34,7 @@ const Card = ({
   return (
     <div className="card">
       <h2>{name}</h2>
-
+      {console.log({ name })}
       <img src={pic} alt="{name}" />
       <div className="stat-container">
         <ul>
@@ -67,10 +67,7 @@ const Card = ({
         {rscrgnscl}
       </ul>
       <ul>
-        <li>
-          <StatCalculator />
-        </li>
-        <li>asjoasdpi</li>
+        <StatCalculator />
       </ul>
     </div>
   );

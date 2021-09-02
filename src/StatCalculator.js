@@ -1,10 +1,12 @@
 import React from "react";
 
-const StatCalculator = () => {
+const StatCalculator = ({
+props
+}) => {
   return (
-    <div>
-        'Hello world'
-    </div>
+    <ul>
+      <li>StatCalculator</li>
+    </ul>
   );
 };
 export default StatCalculator;
