@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import StatCalculator from "./StatCalculator";
 
 const CardList = (props) => {
   let champions = props.champions ? Object.entries(props.champions) : [];
@@ -19,7 +20,7 @@ const CardList = (props) => {
       {champions.length > 0 &&
         champions.map((champion) => (
           <Card
-            name={champion[0]}
+            name={champion[1].id}
             pic={`http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/${champion[1].image.full}`}
             /* Offensive Stats*/
             atkrng={removeStat("Attack Range", champion[1].stats.attackrange)}
