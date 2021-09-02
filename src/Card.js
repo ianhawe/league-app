@@ -67,6 +67,7 @@ const Card = ({
    
       <h2>{name}</h2>
       <img src={pic} alt="{name}" />
+      <StatCalculator/>
       <div className="stat-container">
         <ul>
           {atkrng}
@@ -97,10 +98,10 @@ const Card = ({
         {rscscl}
         {rscrgnscl}
       </ul>
-<ul>
+
   
-        <StatCalculator/>
-</ul>
+      
+
     </div>
   );
 };
