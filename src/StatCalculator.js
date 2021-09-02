@@ -1,4 +1,5 @@
 import React from "react";
+import "./StatCalculator.css";
 
 const StatCalculator = ({
   name,
@@ -32,10 +33,11 @@ const StatCalculator = ({
   return (
     <ul className='stat-calculator'>
       
-      <li>Stats at level: 
-      <input
+      <li>Stats at level: <input
         type='level'
         placeholder='1'
+        className="level-input"
+        maxLength="2"
       />
       </li>
     </ul>

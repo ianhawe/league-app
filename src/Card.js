@@ -31,10 +31,41 @@ const Card = ({
   rscscl,
   rscrgnscl,
 }) => {
+
+  <StatCalculator 
+
+  name={name}
+  pic={pic}
+  /* Offensive Stats*/
+  atkrng={atkrng}
+  atkdmg={atkdmg}
+  atkspd={atkspd}
+  atkdmgscl={atkdmgscl}
+  atkspdscl={atkspdscl}
+  cricha={cricha}
+  crichascl={crichascl}
+
+  /*  Defensive Stats*/
+  hp={hp}
+  hpscl={hpscl}
+  hprgn={hprgn}
+  hprgnscl={hprgnscl}
+  arm={arm}
+  armscl={armscl}
+  splblk={splblk}
+  splblkscl={splblkscl}
+
+  /* Other Stats*/
+  rsc={rsc}
+  rscrgn={rscrgn}
+  rscscl={rscscl}
+  rscrgnscl={rscrgnscl}
+
+  />
   return (
     <div className="card">
+   
       <h2>{name}</h2>
-      {console.log({ name })}
       <img src={pic} alt="{name}" />
       <div className="stat-container">
         <ul>
@@ -66,34 +97,10 @@ const Card = ({
         {rscscl}
         {rscrgnscl}
       </ul>
-      <ul>
-        <StatCalculator
-          name={name}
-          pic={pic}
-          /* Offensive Stats*/
-          atkrng={atkrng}
-          atkdmg={atkdmg}
-          atkspd={atkspd}
-          atkdmgscl={atkdmgscl}
-          atkspdscl={atkspdscl}
-          cricha={cricha}
-          crichascl={crichascl}
-          /*  Defensive Stats*/
-          hp={hp}
-          hpscl={hpscl}
-          hprgn={hprgn}
-          hprgnscl={hprgnscl}
-          arm={arm}
-          armscl={armscl}
-          splblk={splblk}
-          splblkscl={splblkscl}
-          /* Other Stats*/
-          rsc={rsc}
-          rscrgn={rscrgn}
-          rscscl={rscscl}
-          rscrgnscl={rscrgnscl}
-        />
-      </ul>
+<ul>
+  
+        <StatCalculator/>
+</ul>
     </div>
   );
 };
